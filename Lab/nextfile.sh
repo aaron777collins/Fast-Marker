@@ -2,7 +2,7 @@
 
 # Variables
 originalDir="$PWD"
-copydir="/c/Users/aaron/Documents/Comp 2067 Marking/Assignment 1/"
+copydir="/c/Users/aaron/Documents/Comp 2067 Marking/Lab 3/"
 downloads="/c/Users/aaron/Downloads"
 
 # Functions
@@ -49,20 +49,5 @@ cd ..
 # Moving file 1
 moveFile "work1.py"
 
-# Downloading file 2
-cd automation
-python downloadFile2.py
-cd ..
-# Moving file 2
-moveFile "work2.py"
-
-# Downloading file 3
-cd automation
-python downloadFile3.py
-cd ..
-# Moving file 3
-moveFile "work3.py"
-
 runFile "work1.py"
-runFile "work2.py"
-runFile "work3.py"
+
