@@ -2,16 +2,16 @@
 
 # Variables
 originalDir="$PWD"
-copydir="/c/Users/aaron/Documents/Comp 2067 Marking/Lab 3/"
+copydir="/c/Users/aaron/Documents/Comp 2067 Marking/${PWD##*/}/"
 downloads="/c/Users/aaron/Downloads"
 
 # Functions
 
 runFile() {
 	python $1
-	read -p "Press any key to open the code ..."
+	read -p "Press enter to open the code ..."
 	code $1
-	read -p "Press any key to continue ..."
+	read -p "Press enter to continue ..."
 
 }
 
@@ -49,5 +49,5 @@ cd ..
 # Moving file 1
 moveFile "work1.py"
 
-runFile "work1.py"
+bash ./runTests.sh
 
