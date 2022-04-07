@@ -16,19 +16,16 @@ runTest() {
 	cd ..
 }
 
+runTestWithFile() {
+	echo "Running $1 on $2"
+	runTest $1
+	runFile $2
+	wait #syncs up the threads
+}
+
 # Code
 
 read -p "Press enter to start the tests ..."
-runTest "lab4test1.py"
-runFile "work1.py"
-wait #syncs up the threads
-
-
-runTest "lab4test2.py"
-runFile "work1.py"
-wait #syncs up the threads
-
-
-runTest "lab4test3.py"
-runFile "work1.py"
-wait #syncs up the threads
+runTestWithFile "test1.py" "work1.py"
+runTestWithFile "test2.py" "work1.py"
+runTestWithFile "test3.py" "work1.py"
