@@ -14,6 +14,8 @@ while(worked != True):
 	except TypeError:
 		confidence_amount-=0.1
 
+worked = False
+confidence_amount = 1.0
 while(worked != True):
 	try:
 		x, y = pyautogui.locateCenterOnScreen('images\\downloadWork1.png', confidence=confidence_amount)

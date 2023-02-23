@@ -68,6 +68,8 @@ echo "Deleted python files!"
 cd automation
 python downloadFile.py
 cd ..
+sleep 1
+
 # Moving file 1
 moveFile "work1.py"
 
