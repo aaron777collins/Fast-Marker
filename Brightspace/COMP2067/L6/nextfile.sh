@@ -73,5 +73,5 @@ sleep 1
 # Moving file 1
 moveFile "work1.py"
 
-bash ./runTests.sh
-
+# Running texts
+bash runTests.sh
