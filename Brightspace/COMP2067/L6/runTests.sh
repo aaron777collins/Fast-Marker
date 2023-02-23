@@ -37,7 +37,7 @@ runTestWithFile() {
 runTestWithFileWithoutEditor() {
 	echo "Running $1 on $2"
 	runTest $1
-	runFile $2
+	runFileWithoutEditor $2
 	wait #syncs up the threads
 }
 
