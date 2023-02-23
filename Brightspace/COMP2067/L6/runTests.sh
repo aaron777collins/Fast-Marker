@@ -18,7 +18,6 @@ runFile() {
 
 runFileWithoutEditor() {
 	python $1
-	read -p "Press enter to open the code ..."
 }
 
 runTest() {
