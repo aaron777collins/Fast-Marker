@@ -1,6 +1,3 @@
-import dependencies as dependencies
-dependencies.installAll()
-
 import subprocess
 import sys
 import pyautogui
