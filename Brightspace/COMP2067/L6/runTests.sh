@@ -31,6 +31,7 @@ runTestWithFile() {
 	runTest $1
 	runFile $2
 	wait #syncs up the threads
+	echo "$3"
 }
 
 runTestWithFileWithoutEditor() {
@@ -38,6 +39,7 @@ runTestWithFileWithoutEditor() {
 	runTest $1
 	runFileWithoutEditor $2
 	wait #syncs up the threads
+	echo "$3"
 }
 
 # Code
@@ -46,9 +48,9 @@ echo "Moving to $copydir"
 cd $copydir
 
 read -p "Press enter to start the tests ..."
-runTestWithFileWithoutEditor "testq1a.py" "work1.py"
-runTestWithFileWithoutEditor "testq1b.py" "work1.py"
-runTestWithFile "testq1c.py" "work1.py"
+runTestWithFileWithoutEditor "testq1a.py" "work1.py" "Should be 168.75"
+runTestWithFileWithoutEditor "testq1b.py" "work1.py" "Should be 337.5"
+runTestWithFile "testq1c.py" "work1.py" "Should be 547.5"
 
 echo "Moving back to $originalDir"
 cd $originalDir

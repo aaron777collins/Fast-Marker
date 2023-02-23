@@ -6,4 +6,3 @@ import time
 time.sleep(1)
 pyautogui.write('250', interval=0.05)
 pyautogui.press('enter')
-print("Should be 547.5")
