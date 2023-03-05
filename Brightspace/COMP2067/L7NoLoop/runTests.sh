@@ -12,7 +12,7 @@ runFile() {
 	python $1
 	# read -p "Press enter to open the code ..."
 	code $1
-	read -p "Press enter to continue ..."
+	# read -p "Press enter to continue ..."
 
 }
 
